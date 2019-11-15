@@ -1,0 +1,124 @@
+{
+  "name": "tlsft-client",
+  "private": true,
+  "version": "1.0.0",
+  "description": "tlsft-client",
+  "repository": "",
+  "license": "UNLICENSED",
+  "framework7": {
+    "cwd": "/home/bitmage/projects/tlsft/internal/foundry/tlsft-client",
+    "type": [
+      "web"
+    ],
+    "name": "tlsft-client",
+    "framework": "vue",
+    "template": "single-view",
+    "cssPreProcessor": "scss",
+    "bundler": "webpack",
+    "webpack": {
+      "developmentSourceMap": true,
+      "productionSourceMap": true,
+      "hashAssets": false,
+      "preserveAssetsPaths": false,
+      "inlineAssets": true
+    },
+    "theming": {
+      "customColor": false,
+      "color": "#007aff",
+      "darkTheme": false,
+      "iconFonts": true,
+      "fillBars": false
+    },
+    "customBuild": false
+  },
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./build/webpack.config.js",
+    "build-dev": "cross-env NODE_ENV=development node ./build/build.js",
+    "build-prod": "cross-env NODE_ENV=production node ./build/build.js",
+    "postinstall": "cpy './node_modules/framework7-icons/fonts/*.*' './src/fonts/'"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "dependencies": {
+    "axios": "^0.19.0",
+    "dom7": "^2.1.3",
+    "framework7": "^5.1.1",
+    "framework7-icons": "^3.0.0",
+    "framework7-vue": "^5.1.1",
+    "template7": "^1.4.2",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-syntax-jsx": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/runtime": "^7.7.2",
+    "babel-eslint": "^10.0.3",
+    "babel-helper-vue-jsx-merge-props": "^2.0.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-transform-vue-jsx": "^4.0.1",
+    "chai": "^4.2.0",
+    "chai-samsam": "0.0.2",
+    "chalk": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.5",
+    "cpy-cli": "^2.0.0",
+    "cross-env": "^6.0.3",
+    "css-loader": "^3.2.0",
+    "eslint": "^6.6.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-vue": "^6.0.1",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.3",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.13.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "ora": "^4.0.3",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "terser-webpack-plugin": "^2.2.1",
+    "url-loader": "^2.2.0",
+    "vue-loader": "^15.7.2",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write 'src/**/*.js'",
+      "eslint --ext .js --fix src",
+      "git add"
+    ],
+    "*.vue": [
+      "prettier --write 'src/**/*.vue'",
+      "eslint --ext .vue --fix src",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "engines": {
+    "node": "10.x",
+    "npm": ">= 6.0.0"
+  }
+}
