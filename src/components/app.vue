@@ -82,12 +82,7 @@ export default {
         theme: 'auto', // Automatic theme detection
         // App root data
         data: function() {
-          return {
-            user: {
-              firstName: 'John',
-              lastName: 'Doe',
-            },
-          }
+          return {}
         },
 
         // App routes
