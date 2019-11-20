@@ -2,10 +2,10 @@
 import Vue from 'vue'
 
 // Import Framework7
-import Framework7 from 'framework7/framework7-lite.esm.bundle.js'
+import Framework7 from 'framework7/framework7-lite.esm.js'
 
 // Import Framework7-Vue Plugin
-import Framework7Vue from 'framework7-vue/framework7-vue.esm.bundle.js'
+import Framework7Vue from 'framework7-vue'
 
 // Import Framework7 Styles
 import 'framework7/css/framework7.bundle.css'
