@@ -22,7 +22,7 @@ We are responsible for:
 ### Getting PhoneGap Development App On Your Device
 
 * Torchlight has already deployed the [PhoneGap Development](https://github.com/TorchlightSoftware/phonegap-app-developer) app.
-* If you're new to the team, we will need your device UDID for any Apple devices, which [you can get at udid.io](https://get.udid.io).  Unfortunately Apple normally requires you to plug your device into an iTunes-bearing computer in order to discover the UDID - it's not viewable from settings.  Yes, Apple is batshit insane.  No, there's nothing we can do about it.
+* If you're new to the team, we will need your device UDID for any Apple devices, which [you can get at udid.io](https://get.udid.io).  Unfortunately Apple normally requires you to plug your device into an iTunes-bearing computer in order to discover the UDID - it's not viewable from settings.
 
 Once you have your UDID, contact your team lead, who should:
 
