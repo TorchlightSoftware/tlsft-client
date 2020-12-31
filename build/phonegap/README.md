@@ -51,8 +51,21 @@ Once you have your UDID, contact your team lead, who should:
 
 ### Deploying a Development Build to Our Devices
 
-Following are steps to deploy the app to PhoneGap.  This process assumes that (above) configuration is present, and that the app built by webpack is still residing in the `www` directory.
+Once you have the PhoneGap Developer App installed on your phone, previewing your app is easy and doesn't require any iOS/Android build or installation.
 
-1. Install the [PhoneGap CLI](http://docs.phonegap.com/getting-started/1-install-phonegap/cli/) via npm with the following command from the Terminal app: `npm i -g phonegap@latest`
-2. We will be using the [PhoneGap Remote CLI](http://docs.phonegap.com/references/phonegap-cli/remote-usage/) to interact with PhoneGap Build.
-3. Go ahead and log in using `phonegap remote login`.
+1. Install the [PhoneGap CLI](http://docs.phonegap.com/getting-started/1-install-phonegap/cli/) if not already installed.
+2. Run `phonegap serve`.
+3. On your mobile device, open the Phonegap Developer app and put in the IP address where your laptop is serving.  Your phone and laptop must be connected to the same network.
+4. You should see your app load.  If you see a blank white screen this is probably the splash screen.
+
+### Manual PhoneGap Build
+
+1. Go to the [PhoneGap Build website](https://build.phonegap.com/apps).
+2. Create a new app if necessary, add your github repository.
+4. For iOS/Android build, select the proper provisioning profile or upload a new one for your app.  If you use the same profile as a previous app, your phone will replace that app when you install the new one.
+3. Wait for the build to complete, or click rebuild.
+4. Scan the QR code to install the app on your phone.
+
+### CI/Automated Build
+
+Automated build should be performed with [PhoneGap CLI](http://docs.phonegap.com/getting-started/1-install-phonegap/cli/), specifically the [PhoneGap Remote CLI](http://docs.phonegap.com/references/phonegap-cli/remote-usage/).  We may wish to upload the resulting `IPA`/`APPX` to a cloud bucket, or use [Fastlane](https://docs.fastlane.tools/getting-started/ios/appstore-deployment/) to deploy to the app store.  How do we get an IPA from PhoneGap Build in an automated fashion?
